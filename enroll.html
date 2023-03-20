@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <title>Enroll</title>
+       <meta charset="utf-8">
+
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="css/style.css">
+
+       <script type="text/javascript">
+
+           function calculate() {
+               var course = 0;
+               var uniforms = 0;
+               var total = 0;
+
+
+           if (document.getElementById("Adult").checked == true){
+
+               course = 50;
+
+           } 
+           else if (document.getElementById("Teen").checked){
+
+               course = 100;
+
+           }
+           else if (document.getElementById("Child").checked){
+
+               course = 150;
+
+           }
+
+           uniforms = 50 * document.getElementById("Uniforms").value;
+
+           total = course + uniforms;
+
+           alert("your total cost is: £" + total); //This produces a concatenated string in an alert box.
+
+       }
+
+
+       </script>
+</head>
+
+   <body>
+       <header>
+           <img src="media/images/madlogo.png" alt=" martial arts dojo logo">
+       <!-- Above code makes image a clickable hyperlink to home -->
+       </header>
+
+      <nav>
+           <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="aboutme.html">About Me</a></li>
+               <li><a href="classes.html">Classes</a></li>
+               <li><a href="enroll.html">Enroll</a></li>
+               <li><a href="contact.html">Contact</a></li>
+           </ul>
+
+       </nav>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+
+       <main class="enroll">
+
+<!--Info table begin-->
+           <table>
+               <caption>Info</caption>
+               <tr>
+                   <td>First Name</td>
+                   <td><input type="text" id="firstname" name="firstname"></td>
+               </tr>
+
+               <tr>
+                   <td>Last Name</td>
+                   <td><input type="text" id="lastname" name="lastname"></td>
+               </tr>
+
+               <tr>
+                   <td>Email</td>
+                   <td><input type="email" id="email" name="eamil"></td><!--Note the input type-->
+               </tr>
+
+               <tr>
+                   <td>Phone Number</td>
+                   <td><input type="tel" id="phone" name="phone"></td><!--Note the input type-->
+               </tr>
+           </table>
+
+<!--Info table finish-->
+
+<!--Uniform table begin-->
+           <table id="enrollprice">
+               <caption>Enroll</caption>
+               <tr>
+                   <td>Adult</td>
+                   <td>£50</td>
+                   <td><input type="radio" id="Adult" name="course" value="50"></td>
+               </tr>
+
+               <tr>
+                   <td>Teen</td>
+                   <td>£100</td>
+                   <td><input type="radio" id="Teen" name="course" value="100"></td>
+               </tr>
+
+               <tr>
+                   <td>Child</td>
+                   <td>£150</td>
+                   <td><input type="radio" id="Child" name="course" value="150"></td>
+               </tr>
+
+               <tr>
+                   <td>Unifroms</td>
+                   <td>£50</td>
+                   <td><input type="number" id="Uniforms" min="0" value="0"></td>
+               </tr>
+           </table>
+
+           <p><input type="submit" id="submit" name="submit" onclick=calculate()></p>
+           <input type="reset" id="reset" name="reset"> <br>
+
+<!--Uniform table finish-->
+       </main>
+
+       <footer>
+           <P>Our Location:<br>
+           7 closewool Grove, South Molton, EX36 3GA.<br>
+           phone number: <a href=tel:(+44)7979971328>07979971328</a><br>
+           Email address: <a href=mailto:billysheppard2504@gmail.com>billysheppard2504@gnmail.com</a>
+       </P>
+       </footer>
+
+   </body>
+</html> 
