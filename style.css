@@ -1,0 +1,241 @@
+@import url(mobilestyle.css);
+@import url(tabletstyle.css);
+
+body {
+    background-image: linear-gradient(rgb(4, 154, 104), white,white,aquamarine);
+}
+
+header img {
+    background-image:linear-gradient(rgb(4, 154, 104), aquamarine);
+    width: 100%; /*This will stretch the image accross the whole viewpoint.*/
+    height: auto; /*This will change the hight depending on the size of the viewpoint.*/
+    border-top: solid 0.3em black;
+    border-bottom: solid 0.3em black;
+    border-left: solid 0.3em black;
+    border-right: solid 0.3em black;
+}
+
+nav ul{
+    padding: 0.5em;
+    margin-top: 0.4em;
+    margin-bottom: 0.2em;
+    height: auto;
+    min-height: 4em;
+}
+
+nav ul li {
+    list-style-type: none; /*This get's ridd of the bullet points*/
+    background-color: rgb(139, 205, 255);
+    padding: 0.2em;
+    min-width: 12%;
+    margin: 0.6em;
+    width:auto
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none; /*This removes the underline from the hyperlink*/
+}
+
+nav {
+    border-top: solid 0.3em black;
+    border-bottom: solid 0.3em black;
+    border-left: solid 0.3em black;
+    border-right: solid 0.3em black;
+    border-radius: 10%;
+    background-color: white;
+    font-weight: bold;
+    text-align: center;
+    background-image:linear-gradient(rgb(4, 154, 104), aquamarine);
+}
+
+figure{
+    text-align: center;
+    /*background-color: white;*/ /*This is off so that the colour behind the image is not different to the body background image*/
+}
+
+figure img {
+    max-width: 800px;
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+main {
+    margin: 1em;
+    border-top: solid 0.3em black;
+    border-bottom: solid 0.3em black;
+    border-radius: 10%;
+    background-color: white;
+    box-shadow: 0.5em 0.5em 0.5em black;
+}
+
+main div .schedule{
+    border: o.3em solid black;
+    text-align: center;
+}
+
+/*Table begin*/
+.schedule table{
+    border: 0.3em solid black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: white;
+    padding: 0.3em;
+    width: 80%;
+}
+
+.schedule caption {
+    border: 0.3em solid black;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: white;
+    
+}
+
+.schedule th, .schedule td {
+    border: 0.3em solid black;
+    border-collapse: collapse;
+    padding: 0.3em;
+    text-align: center;
+}
+
+.schedule th{
+    background-color: aquamarine;
+    color: black;
+}
+
+
+
+
+
+/*Table finsih*/
+
+/*3 colum layout begin*/
+main .row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main div .column {
+    float: left;
+    width: 53.1%;
+}
+
+
+main div .left{
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+
+main div .center{
+    padding: 10px;
+    width: 30%;
+}
+
+main div .right{
+    float: right;
+    padding: 10px;
+    width: 30%;
+}
+/*3 colum layout finish*/
+
+/*3 conatact form Begin*/
+.form {
+    text-align: center;
+}
+
+.enroll{
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    margin-left: 3em;
+}
+
+#enrollprice{
+    border: 0.1em solid black;
+    border-collapse: collapse;
+}
+
+#enrollprice td{
+    border: 0.1em solid black;
+    padding: 0.5em;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+/*3 conatact form finish*/
+footer {
+    margin: 1em;
+    border-top: solid 0.3em black;
+    border-bottom: solid 0.3em black;
+    border-radius: 10%; /*this rounds the coners of the borders*/
+    background-color: white;
+    background-image: linear-gradient(to right, white,aquamarine);
+    text-align: center;
+}
+
+
+
+
+/*Begin desktop*/
+@media screen and (min-width: 979px){
+
+    header img{
+        text-align: left;
+        width: 48%;
+        max-height: 120px;
+        float: left;    
+        margin-bottom: 2em;
+    }
+
+
+    nav{
+        text-align: center;
+        width: 50%;
+        float: right;    
+        background-color: transparent;
+        margin-bottom: 10.1919999em;
+
+    }
+    
+    nav ul li{
+        display: inline-block; /*This lists items horizontal*/
+        width: 85%;
+        height: auto;
+        display: inline;
+        padding: 0.6em;
+        border-radius: 10%;
+    }
+
+    figure img{
+        margin-left: 4em;
+        margin-right: 4em;
+        margin-top: -7em;
+        margin-bottom: 1em;
+    }
+
+
+    main div .center{
+        border-right: 0.3em solid black;
+        border-left: 0.3em solid black;
+    }  
+
+    .form{
+        margin-top: 7em;
+    }
+
+.schedule{
+    margin-top: 8em;
+}
+
+    .schedule table{
+        margin-left: 6em;
+    }
+}
+/*End desktop*/
+
+

@@ -1,0 +1,27 @@
+/*Begin Tablet*/
+@media screen and (max-width: 978px){
+
+    .desktop {
+        display: none;
+        
+    }
+
+    header{
+        width: 99%;
+    }
+
+    nav ul li{
+        display: inline-block; /*This lists items horizontal*/
+        border-radius: 1em;
+    }
+
+    .schedule table{
+        margin-left: 6em;
+        margin-bottom: -6em;
+    }
+
+    .enroll {
+        margin-top: -5em;
+    }
+}
+/*End Tablet*/
